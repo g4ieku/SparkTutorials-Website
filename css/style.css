@@ -19,6 +19,8 @@ html {
   --secondary-color: #87bac3;
   --light-color: #d6f4ed;
   --dark-color: #473472;
+
+  --white-color: #fff;
 }
 
 body {
@@ -30,7 +32,57 @@ img {
   max-width: 100%;
 }
 
-/* Media Queries */
+a {
+  color: var(--white-color);
+}
+
+/* ============ Containers ============ */
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 1.75rem;
+}
+
+.container_sm {
+  max-width: 1000px;
+}
+
+/* ============ Navbar ============ */
+.navbar {
+  background: var(--dark-color);
+  color: var(--white-color);
+  padding: 1rem 1.75rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background 0.3s ease-in-out;
+
+  .navbar_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  img {
+    width: 70px;
+  }
+
+  .main_menu_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    font-weight: 600;
+  }
+
+  a:hover {
+    color: var(--light-color);
+  }
+}
+
+/* ============ Media Queries ============ */
 @media screen and (max-width: 1150px) {
 }
 
