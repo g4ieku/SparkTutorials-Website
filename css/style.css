@@ -15,10 +15,10 @@ html {
 }
 
 :root {
-  --primary-color: #53629e;
-  --secondary-color: #87bac3;
-  --light-color: #d6f4ed;
-  --dark-color: #473472;
+  --primary-color: #37353e;
+  --secondary-color: #1d1616;
+  --light-color: #d3dad9;
+  --dark-color: #1d1616;
 
   --white-color: #fff;
 }
@@ -80,6 +80,44 @@ a {
   a:hover {
     color: var(--light-color);
   }
+
+  /* ============ Mobile Navbar ============ */
+  .mobile_menu {
+    display: none;
+  }
+
+  .mobile_menu_toggle {
+    cursor: pointer;
+  }
+
+  .mobile_menu_items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--primary-color);
+    opacity: 0.95;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .mobile_menu_items.active {
+    transform: translateX(0);
+  }
+
+  .mobile_menu_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.55rem;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
 }
 
 /* ============ Media Queries ============ */
@@ -90,6 +128,20 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+  .navbar {
+    .main_menu_items {
+      display: none;
+    }
+
+    .mobile_menu {
+      display: block;
+    }
+
+    .mobile_menu_toggle {
+      display: block;
+      padding: 1rem;
+    }
+  }
 }
 
 @media screen and (max-width: 576px) {
