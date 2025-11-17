@@ -66,6 +66,7 @@ a {
   background: var(--dark-color);
   color: var(--white-color);
   padding: 1rem 1.75rem;
+  height: 100px;
   position: fixed;
   top: 0;
   right: 0;
@@ -109,6 +110,7 @@ a {
     top: 100%;
     left: 0;
     width: 100%;
+    height: 100vh;
     background: var(--primary-color);
     opacity: 0.95;
     padding: 2.5rem 2rem;
@@ -137,12 +139,13 @@ a {
 /* ============ Hero ============ */
 .hero {
   /* background: #000 url("../images/abstract-digital-grid-black-background.jpg") center center/cover no-repeat; */
+  margin-top: 100px;
+  height: calc(100vh - 100px);
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--white-color);
   padding: 10rem 2rem 8rem;
-  height: 100vh;
   color: var(--secondary-color);
   position: relative;
 
@@ -150,13 +153,12 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 4.5rem;
+    gap: 3.5rem;
     padding-bottom: 7rem;
   }
 
   img {
-    max-height: 400px;
-    width: 100%;
+    max-height: 600px;
   }
 
   h1 {
@@ -176,9 +178,30 @@ a {
 
 /* ============ Media Queries ============ */
 @media screen and (max-width: 1150px) {
+  .hero {
+    .hero_flex {
+      gap: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    img {
+      max-width: 400px;
+    }
+  }
 }
 
 @media screen and (max-width: 992px) {
+  .hero {
+    padding: 7rem 1rem 8rem;
+
+    .hero_flex {
+      gap: 1rem;
+      padding-bottom: 4rem;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -194,6 +217,20 @@ a {
     .mobile_menu_toggle {
       display: block;
       padding: 1rem;
+    }
+  }
+
+  .hero {
+    text-align: center;
+
+    .hero_flex {
+      flex-direction: column;
+      padding-bottom: 0;
+    }
+
+    img {
+      max-width: 450px;
+      width: 100%;
     }
   }
 }
