@@ -136,16 +136,16 @@ a {
   }
 }
 
+.navbar.navbar_scroll {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
 /* ============ Hero ============ */
 .hero {
   /* background: #000 url("../images/abstract-digital-grid-black-background.jpg") center center/cover no-repeat; */
-  margin-top: 100px;
-  height: calc(100vh - 100px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: var(--white-color);
-  padding: 10rem 2rem 8rem;
+  padding: 10rem 2rem 0rem;
   color: var(--secondary-color);
   position: relative;
 
@@ -195,7 +195,7 @@ a {
 
 @media screen and (max-width: 992px) {
   .hero {
-    padding: 7rem 1rem 8rem;
+    padding: 7rem 1rem 0rem;
 
     .hero_flex {
       gap: 1rem;
