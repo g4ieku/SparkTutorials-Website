@@ -61,6 +61,31 @@ a {
   color: var(--dark-color);
 }
 
+.section_header {
+  max-width: 750px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+  }
+}
+
+.heading_border {
+  width: 65px;
+  height: 4px;
+  background: var(--primary-color);
+  margin: 0 auto 1.25rem;
+}
+
 /* ============ Navbar ============ */
 .navbar {
   background: var(--dark-color);
@@ -147,7 +172,10 @@ a {
   background: var(--white-color);
   padding: 10rem 2rem 0rem;
   color: var(--secondary-color);
-  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .hero_flex {
     display: flex;
@@ -173,6 +201,30 @@ a {
     font-weight: 300;
     margin-bottom: 2rem;
     line-height: 1.7;
+  }
+}
+
+/* ============ Learn Section ============ */
+.learn {
+  .topics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .topic img {
+    transition: transform 0.3s;
+  }
+
+  .topic img:hover {
+    transform: scale(1.05);
+  }
+
+  .topic h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
   }
 }
 
