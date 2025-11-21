@@ -59,6 +59,8 @@ a {
 .btn:hover {
   background: var(--light-color);
   color: var(--dark-color);
+  transform: rotate(-1.5deg);
+  letter-spacing: 0.5px;
 }
 
 section {
@@ -409,6 +411,79 @@ section {
   flex-direction: row-reverse;
 }
 
+/* ============ Stats Section ============ */
+.stats {
+  position: relative;
+  background: #000 url("../images/pexels-pixabay-259915.jpg") center center/cover no-repeat;
+  color: var(--white-color);
+
+  .container {
+    position: relative;
+  }
+
+  .stats_flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3.25rem;
+    padding: 3.5rem 2rem;
+
+    img {
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .stats_content {
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .stats_numbers {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.75rem;
+      margin: 1.75rem 0;
+      text-align: center;
+
+      h3 {
+        font-size: 2.75rem;
+        font-weight: 700;
+      }
+
+      p {
+        text-align: center;
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .stats_txt {
+      font-size: 1.1rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      display: block;
+      width: 180px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
+
+.stats::before {
+  content: "";
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  position: absolute;
+}
+
 /* ============ Media Queries ============ */
 @media screen and (max-width: 1150px) {
   .hero {
@@ -461,7 +536,8 @@ section {
   }
 
   .details_flex,
-  .details + .details .details_flex {
+  .details + .details .details_flex,
+  .stats_flex {
     flex-direction: column;
     gap: 2rem;
   }
@@ -523,4 +599,10 @@ section {
 }
 
 @media screen and (max-width: 576px) {
+  .stats {
+    .stats_numbers {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
 }
