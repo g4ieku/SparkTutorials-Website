@@ -109,6 +109,14 @@ section {
   }
 }
 
+.text_primary {
+  color: var(--primary-color);
+}
+
+.text_secondary {
+  color: var(--secondary-color);
+}
+
 /* ============ Navbar ============ */
 .navbar {
   background: var(--dark-color);
@@ -338,6 +346,21 @@ section {
       margin-right: 0.5rem;
       color: var(--white-color);
     }
+  }
+}
+
+/* ============ Takeaways Section ============ */
+.takeaways {
+  .takeaway_cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    gap: 1rem;
+  }
+
+  .card {
+    flex-direction: row;
+    text-align: left;
+    gap: 1rem;
   }
 }
 
